@@ -1,0 +1,189 @@
+[
+ {
+  "id": "cuarentena",
+  "code": "P-01",
+  "name": "Recepción y cuarentena",
+  "type": "bio",
+  "w": 10,
+  "d": 9,
+  "h": 3.4,
+  "col": "W",
+  "cap": "6 tanques de 1 m³",
+  "desc": "Ingreso de reproductores con aclimatación.",
+  "parts": [
+   "6 tanques 1 m³",
+   "Lavapiés",
+   "Mesa de inspección"
+  ]
+ },
+ {
+  "id": "reproductores",
+  "code": "P-02",
+  "name": "Reproductores (hapas)",
+  "type": "bio",
+  "w": 16,
+  "d": 8,
+  "h": 3.6,
+  "col": "W",
+  "cap": "4 estanques de 12 m³",
+  "desc": "Parejas en hapas; relación 1 macho : 3 hembras.",
+  "parts": [
+   "4 estanques 12 m³",
+   "Hapas",
+   "Aireadores"
+  ]
+ },
+ {
+  "id": "incubacion",
+  "code": "P-03",
+  "name": "Incubación (jarras Zuger/McDonald)",
+  "type": "bio",
+  "w": 14,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "24 jarras",
+  "desc": "Huevos extraídos de la boca de la hembra.",
+  "parts": [
+   "24 jarras",
+   "Bomba de recirculación",
+   "Calentador"
+  ]
+ },
+ {
+  "id": "inversion",
+  "code": "P-04",
+  "name": "Inversión sexual",
+  "type": "bio",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "8 tanques de 0,5 m³",
+  "desc": "Alimento con hormona durante 28 días.",
+  "parts": [
+   "8 tanques",
+   "Dosificador",
+   "Termostato"
+  ]
+ },
+ {
+  "id": "alevinaje",
+  "code": "P-05",
+  "name": "Alevinaje (nursery)",
+  "type": "ras",
+  "w": 20,
+  "d": 10,
+  "h": 3.8,
+  "col": "W",
+  "cap": "10 tanques de 3 m³",
+  "desc": "Cría hasta 5 g con clasificación por talla.",
+  "parts": [
+   "10 tanques 3 m³",
+   "Clasificador",
+   "Aireación"
+  ]
+ },
+ {
+  "id": "lab",
+  "code": "P-06",
+  "name": "Laboratorio y calidad de agua",
+  "type": "control",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Kits y microscopio",
+  "desc": "Medición diaria de O2, pH, NH3 y NO2.",
+  "parts": [
+   "Microscopio",
+   "Fotómetro",
+   "Refrigerador"
+  ]
+ },
+ {
+  "id": "zooplancton",
+  "code": "P-07",
+  "name": "Zooplancton (alimento vivo)",
+  "type": "feed",
+  "w": 10,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "6 tanques de 1 m³",
+  "desc": "Daphnia y copépodos para primera alimentación.",
+  "parts": [
+   "6 tanques",
+   "Aireación",
+   "Luz"
+  ]
+ },
+ {
+  "id": "ras",
+  "code": "P-08",
+  "name": "RAS y biofiltro",
+  "type": "ras",
+  "w": 14,
+  "d": 10,
+  "h": 3.8,
+  "col": "E",
+  "cap": "Biofiltro 10 m³",
+  "desc": "Filtro de tambor y biofiltro de lecho móvil.",
+  "parts": [
+   "Filtro de tambor",
+   "Biofiltro",
+   "Bombas",
+   "Desgasificador"
+  ]
+ },
+ {
+  "id": "bodega",
+  "code": "P-09",
+  "name": "Bodega de insumos",
+  "type": "feed",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Balanceado y reactivos",
+  "desc": "Almacén seco.",
+  "parts": [
+   "Estantes",
+   "Tarimas"
+  ]
+ },
+ {
+  "id": "electrica",
+  "code": "P-10",
+  "name": "Sala eléctrica",
+  "type": "power",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Tablero y respaldo",
+  "desc": "Alimentación y respaldo.",
+  "parts": [
+   "Tablero",
+   "UPS",
+   "Generador"
+  ]
+ },
+ {
+  "id": "empaque",
+  "code": "P-11",
+  "name": "Empaque y despacho",
+  "type": "water",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "Bolsas con oxígeno",
+  "desc": "Embalaje de alevines.",
+  "parts": [
+   "Mesa",
+   "Tanque de espera",
+   "Oxígeno"
+  ]
+ }
+]

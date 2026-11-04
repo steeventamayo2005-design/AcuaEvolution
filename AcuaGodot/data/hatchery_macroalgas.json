@@ -1,0 +1,166 @@
+[
+ {
+  "id": "cepas",
+  "code": "A-01",
+  "name": "Banco de cepas",
+  "type": "bio",
+  "w": 10,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "30 matraces",
+  "desc": "Cepas de Ulva y Gracilaria.",
+  "parts": [
+   "Matraces",
+   "Luz",
+   "Incubadora"
+  ]
+ },
+ {
+  "id": "esporulacion",
+  "code": "A-02",
+  "name": "Esporulación",
+  "type": "bio",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "8 tanques de 0,3 m³",
+  "desc": "Liberación de esporas.",
+  "parts": [
+   "8 tanques",
+   "Luz",
+   "Termostato"
+  ]
+ },
+ {
+  "id": "vivero",
+  "code": "A-03",
+  "name": "Vivero",
+  "type": "ras",
+  "w": 16,
+  "d": 8,
+  "h": 3.6,
+  "col": "W",
+  "cap": "6 tanques de 2 m³",
+  "desc": "Plántulas hasta talla de siembra.",
+  "parts": [
+   "6 tanques",
+   "Aireación",
+   "Luz"
+  ]
+ },
+ {
+  "id": "tumble",
+  "code": "A-04",
+  "name": "Cultivo tumble",
+  "type": "ras",
+  "w": 24,
+  "d": 12,
+  "h": 4.0,
+  "col": "W",
+  "cap": "6 tanques de 20 m³",
+  "desc": "Rotación por inyección de aire.",
+  "parts": [
+   "6 tanques 20 m³",
+   "Sopladores",
+   "Luz"
+  ]
+ },
+ {
+  "id": "proceso",
+  "code": "A-05",
+  "name": "Secado y proceso",
+  "type": "feed",
+  "w": 14,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "Secador",
+  "desc": "Biomasa para agar y alimento.",
+  "parts": [
+   "Secador",
+   "Molino"
+  ]
+ },
+ {
+  "id": "bombeo",
+  "code": "A-06",
+  "name": "Bombeo y aireación",
+  "type": "power",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Bombas y sopladores",
+  "desc": "Circulación.",
+  "parts": [
+   "Bombas",
+   "Sopladores"
+  ]
+ },
+ {
+  "id": "nutrientes",
+  "code": "A-07",
+  "name": "Nutrientes",
+  "type": "feed",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Dosificadores",
+  "desc": "Nitrato y fosfato.",
+  "parts": [
+   "Dosificadores",
+   "Tanques de stock"
+  ]
+ },
+ {
+  "id": "lab",
+  "code": "A-08",
+  "name": "Laboratorio",
+  "type": "control",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Fotómetro",
+  "desc": "Control de nutrientes.",
+  "parts": [
+   "Fotómetro",
+   "Microscopio"
+  ]
+ },
+ {
+  "id": "tratamiento",
+  "code": "A-09",
+  "name": "Tratamiento de agua",
+  "type": "water",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "Filtros",
+  "desc": "Agua marina.",
+  "parts": [
+   "Filtros",
+   "UV"
+  ]
+ },
+ {
+  "id": "electrica",
+  "code": "A-10",
+  "name": "Sala eléctrica",
+  "type": "power",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Tablero",
+  "desc": "Alimentación.",
+  "parts": [
+   "Tablero",
+   "UPS"
+  ]
+ }
+]

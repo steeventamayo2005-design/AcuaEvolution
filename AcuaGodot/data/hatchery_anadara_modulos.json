@@ -1,0 +1,716 @@
+[
+ {
+  "id": "acceso",
+  "code": "ACC-00",
+  "name": "Acceso y Descontaminación",
+  "type": "control",
+  "w": 14,
+  "d": 16,
+  "h": 4.2,
+  "cap": "esclusa sanitaria",
+  "desc": "Pediluvio, vestidores, 4 duchas, lavamanos y cortina UV-C.",
+  "parts": [
+   "Pediluvio 200 ppm",
+   "10 lockers",
+   "4 duchas",
+   "2 lavamanos",
+   "UV-C 254 nm"
+  ],
+  "measures": [
+   [
+    "Flujo",
+    "Sucio → Limpio"
+   ],
+   [
+    "Cloro",
+    "200 ppm"
+   ],
+   [
+    "Duchas",
+    "4"
+   ]
+  ]
+ },
+ {
+  "id": "recepcion",
+  "code": "REC-01",
+  "name": "Recepción y Cuarentena",
+  "type": "bio",
+  "w": 10,
+  "d": 9,
+  "h": 4,
+  "cap": "4×200 L + pileta",
+  "desc": "Control biométrico, yodóforo.",
+  "parts": [
+   "Pediluvio",
+   "4 Rotoplas 200 L",
+   "2 piletas",
+   "Balanzas"
+  ],
+  "measures": [
+   [
+    "Long",
+    "≥ 45 mm"
+   ],
+   [
+    "Peso",
+    "≥ 25 g"
+   ]
+  ]
+ },
+ {
+  "id": "lab",
+  "code": "LAB-02",
+  "name": "Laboratorio SCADA",
+  "type": "control",
+  "w": 7,
+  "d": 9,
+  "h": 4,
+  "cap": "> 60 IoT",
+  "desc": "Control fisicoquímico continuo.",
+  "parts": [
+   "Sondas RS485",
+   "Rack SCADA",
+   "Server HMI",
+   "Microscopios"
+  ],
+  "measures": [
+   [
+    "pH",
+    "7.8-8.2"
+   ],
+   [
+    "OD",
+    "> 6 mg/L"
+   ]
+  ]
+ },
+ {
+  "id": "algas",
+  "code": "ALG-04",
+  "name": "Alimento Vivo FBR",
+  "type": "feed",
+  "w": 12,
+  "d": 9,
+  "h": 4,
+  "cap": "24 FBR en 0 · PVC",
+  "desc": "Fotobiorreactores forma 0 con bomba y biodigestor CO₂.",
+  "parts": [
+   "24 FBR forma 0",
+   "PVC transparente",
+   "Bomba recirc.",
+   "Mini biodigestor CO₂"
+  ],
+  "measures": [
+   [
+    "Diseño",
+    "Forma 0"
+   ],
+   [
+    "Producción",
+    "2.400 L/día"
+   ],
+   [
+    "Densidad",
+    "5×10⁶ cél/mL"
+   ],
+   [
+    "Producción cél",
+    "1,2×10¹³/día"
+   ]
+  ]
+ },
+ {
+  "id": "bodega",
+  "code": "BOD-11",
+  "name": "Bodega",
+  "type": "control",
+  "w": 12,
+  "d": 9,
+  "h": 4,
+  "cap": "insumos",
+  "desc": "Almacén climatizado.",
+  "parts": [
+   "6 estanterías",
+   "Balanza 150 kg",
+   "Cámara seca"
+  ],
+  "measures": [
+   [
+    "Estanterías",
+    "6"
+   ]
+  ]
+ },
+ {
+  "id": "electrica",
+  "code": "ELE-12",
+  "name": "Sala Eléctrica",
+  "type": "power",
+  "w": 13,
+  "d": 9,
+  "h": 4,
+  "cap": "≈ 180 kW",
+  "desc": "Tableros + UPS.",
+  "parts": [
+   "Tablero 400 A",
+   "UPS 6 kVA",
+   "ATS"
+  ],
+  "measures": [
+   [
+    "Tablero",
+    "400 A"
+   ]
+  ]
+ },
+ {
+  "id": "maduracion",
+  "code": "MAD-03",
+  "name": "Maduración Gonadal",
+  "type": "water",
+  "w": 14,
+  "d": 10,
+  "h": 4.2,
+  "cap": "6×1.000 L",
+  "desc": "Acondicionamiento 14L:10O.",
+  "parts": [
+   "6 Rotoplas 1.000 L",
+   "LED mixto",
+   "Sondas IoT",
+   "Biofiltro"
+  ],
+  "measures": [
+   [
+    "Vol",
+    "6.000 L"
+   ],
+   [
+    "Fotoperiodo",
+    "14L:10O"
+   ]
+  ]
+ },
+ {
+  "id": "cip",
+  "code": "CIP-10",
+  "name": "CIP",
+  "type": "bio",
+  "w": 7,
+  "d": 10,
+  "h": 4,
+  "cap": "7 pasos",
+  "desc": "Clean-In-Place.",
+  "parts": [
+   "Autoclave 75 L",
+   "Skid CIP",
+   "Biorreactor"
+  ],
+  "measures": [
+   [
+    "Pasos",
+    "7"
+   ],
+   [
+    "Cloro",
+    "50 ppm"
+   ]
+  ]
+ },
+ {
+  "id": "ras",
+  "code": "RAS-05",
+  "name": "Filtración RAS",
+  "type": "ras",
+  "w": 14,
+  "d": 10,
+  "h": 4.6,
+  "cap": "tren 7 etapas",
+  "desc": "Multietapa + biofiltro + UV-C.",
+  "parts": [
+   "Rejilla 1 mm",
+   "Coagulación PAC",
+   "Arena 15-20 µm",
+   "Microfiltro 1 µm",
+   "UV-C 40 mJ",
+   "Biofiltro"
+  ],
+  "measures": [
+   [
+    "Etapas",
+    "7"
+   ],
+   [
+    "UV-C",
+    "40 mJ/cm²"
+   ]
+  ]
+ },
+ {
+  "id": "aireacion",
+  "code": "AIR-09",
+  "name": "Sopladores y O₂",
+  "type": "ras",
+  "w": 9,
+  "d": 10,
+  "h": 4.2,
+  "cap": "aire + O₂",
+  "desc": "Sopladores + Venturi O₂.",
+  "parts": [
+   "2 sopladores 7,5 kW",
+   "Manifold",
+   "Depósito O₂"
+  ],
+  "measures": [
+   [
+    "Sopladores",
+    "2"
+   ],
+   [
+    "O₂",
+    "99,5%"
+   ]
+  ]
+ },
+ {
+  "id": "generador",
+  "code": "GEN-13",
+  "name": "Grupo Electrógeno",
+  "type": "power",
+  "w": 10,
+  "d": 10,
+  "h": 4.2,
+  "cap": "250 kVA",
+  "desc": "Respaldo diésel ATS.",
+  "parts": [
+   "Grupo 250 kVA",
+   "Estanque 1.000 L",
+   "ATS"
+  ],
+  "measures": [
+   [
+    "Potencia",
+    "250 kVA"
+   ]
+  ]
+ },
+ {
+  "id": "desove",
+  "code": "DES-06",
+  "name": "Desove Inducido",
+  "type": "water",
+  "w": 20,
+  "d": 8,
+  "h": 4.2,
+  "cap": "75 cónicos",
+  "desc": "5 secciones × 15 cónicos.",
+  "parts": [
+   "75 tanques",
+   "75 jarras",
+   "Anclajes AISI 304",
+   "Sondas turbidez"
+  ],
+  "measures": [
+   [
+    "Total",
+    "75"
+   ],
+   [
+    "Niveles",
+    "3"
+   ]
+  ]
+ },
+ {
+  "id": "tratamiento",
+  "code": "TRAT-07",
+  "name": "Tratamiento Efluentes",
+  "type": "ras",
+  "w": 19,
+  "d": 8,
+  "h": 4.2,
+  "cap": "4 etapas",
+  "desc": "Sedimentación + pH + UV-C.",
+  "parts": [
+   "Tanque 5.000 L",
+   "2 reactores pH",
+   "UV-C 40 mJ",
+   "Caudalímetro"
+  ],
+  "measures": [
+   [
+    "Caudal",
+    "30 m³/h"
+   ]
+  ]
+ },
+ {
+  "id": "reservorios",
+  "code": "RES-08",
+  "name": "Reservorios",
+  "type": "ras",
+  "w": 15,
+  "d": 8,
+  "h": 4.4,
+  "cap": "3×5.000 L",
+  "desc": "Rotación A/B/C con UV-C.",
+  "parts": [
+   "3 Rotoplas 5.000 L",
+   "Manifold PVC",
+   "Bombas centrífugas"
+  ],
+  "measures": [
+   [
+    "Total",
+    "15.000 L"
+   ]
+  ]
+ },
+ {
+  "id": "recuperacion",
+  "code": "REC-14",
+  "name": "Recuperación Post-Desove",
+  "type": "bio",
+  "w": 24,
+  "d": 8,
+  "h": 4.2,
+  "cap": "6 tanques · 800 L",
+  "desc": "Descanso post-cópula · recarga 1.8×.",
+  "parts": [
+   "6 tanques 800 L",
+   "Aireación baja",
+   "Dieta 4%",
+   "LED tenue"
+  ],
+  "measures": [
+   [
+    "Capacidad",
+    "6 lotes"
+   ],
+   [
+    "Recarga",
+    "1.8×"
+   ]
+  ]
+ },
+ {
+  "id": "prelarvicultura",
+  "code": "PRE-18",
+  "name": "Pre-larvicultura",
+  "type": "water",
+  "w": 16,
+  "d": 8,
+  "h": 4.2,
+  "cap": "12 tanques 500 L",
+  "desc": "D-larva → pediveliger.",
+  "parts": [
+   "12 tanques 500 L",
+   "Aireación microperforada",
+   "Sondas OD/pH/T",
+   "Filtro 5 µm"
+  ],
+  "measures": [
+   [
+    "Duración",
+    "20 d"
+   ],
+   [
+    "Densidad",
+    "30 larvas/mL"
+   ]
+  ]
+ },
+ {
+  "id": "asentamiento",
+  "code": "MET-19",
+  "name": "Asentamiento",
+  "type": "water",
+  "w": 12,
+  "d": 8,
+  "h": 4.2,
+  "cap": "6 tanques con sustrato",
+  "desc": "Malla nylon 150 µm · oscuridad total.",
+  "parts": [
+   "6 tanques 1.000 L",
+   "Malla nylon 150 µm",
+   "Arena secundaria",
+   "Autoclave"
+  ],
+  "measures": [
+   [
+    "Duración",
+    "48-72 h"
+   ],
+   [
+    "Sustrato",
+    "Nylon 150 µm"
+   ],
+   [
+    "Fotoperiodo",
+    "0L:24D"
+   ]
+  ]
+ },
+ {
+  "id": "nursery",
+  "code": "NUR-20",
+  "name": "Nursery Post-larval",
+  "type": "water",
+  "w": 16,
+  "d": 8,
+  "h": 4.2,
+  "cap": "8 tanques 5.000 L",
+  "desc": "Post-larvas 400 µm → 2 mm.",
+  "parts": [
+   "8 tanques 5.000 L",
+   "Aireación microperforada",
+   "Sondas OD/pH/T",
+   "Dieta mixta"
+  ],
+  "measures": [
+   [
+    "Duración",
+    "20-30 d"
+   ],
+   [
+    "Densidad",
+    "10 post-larvas/mL"
+   ],
+   [
+    "Superv.",
+    "60-70%"
+   ]
+  ]
+ },
+ {
+  "id": "pre_engorde",
+  "code": "PRE-21",
+  "name": "Pre-engorde Semilla",
+  "type": "water",
+  "w": 16,
+  "d": 8,
+  "h": 4.2,
+  "cap": "6 raceways 10.000 L",
+  "desc": "Semilla 2 mm → 8 mm.",
+  "parts": [
+   "6 raceways 10.000 L",
+   "Sustrato 300 µm",
+   "Alimentación automática",
+   "Sondas continuas"
+  ],
+  "measures": [
+   [
+    "Duración",
+    "30-40 d"
+   ],
+   [
+    "Tamaño final",
+    "8 mm"
+   ],
+   [
+    "Superv.",
+    "85%"
+   ]
+  ]
+ },
+ {
+  "id": "empaque",
+  "code": "EMP-22",
+  "name": "Empaque y Exportación",
+  "type": "control",
+  "w": 18,
+  "d": 8,
+  "h": 4.2,
+  "cap": "4 mesas + cámara fría",
+  "desc": "Bolsas tricapa 5 L · O₂ medicinal · QR.",
+  "parts": [
+   "4 mesas inox",
+   "Selladora térmica",
+   "Impresora QR",
+   "Cámara fría 4 °C"
+  ],
+  "measures": [
+   [
+    "Bolsas",
+    "5 L tricapa"
+   ],
+   [
+    "Densidad",
+    "500 sem/bolsa"
+   ],
+   [
+    "T",
+    "18-20 °C"
+   ]
+  ]
+ },
+ {
+  "id": "larvicultura",
+  "code": "LAR-23",
+  "name": "Larvicultura Principal",
+  "type": "water",
+  "w": 16,
+  "d": 8,
+  "h": 4.2,
+  "cap": "16 tanques cónicos 2.000 L",
+  "desc": "Cría larval con malla nylon 150 µm. Crecimiento 4,77 µm/día.",
+  "parts": [
+   "16 tanques 2.000 L",
+   "Malla nylon 150 µm",
+   "Aireación microperforada",
+   "UV-C en línea",
+   "Sondas continuas",
+   "Tamices"
+  ],
+  "measures": [
+   [
+    "Duración",
+    "18 días"
+   ],
+   [
+    "Densidad",
+    "20 larvas/mL"
+   ],
+   [
+    "Superv.",
+    "55 %"
+   ],
+   [
+    "Crecimiento",
+    "4,77 µm/día"
+   ]
+  ]
+ },
+ {
+  "id": "artemia",
+  "code": "ART-24",
+  "name": "Cultivo de Artemia",
+  "type": "feed",
+  "w": 14,
+  "d": 8,
+  "h": 4.2,
+  "cap": "6 tanques 500 L",
+  "desc": "Cultivo de Artemia salina como alimento vivo.",
+  "parts": [
+   "6 tanques cónicos 500 L",
+   "Aireación intensiva",
+   "Cosechador",
+   "Lámpara atracción",
+   "Cistos congelados"
+  ],
+  "measures": [
+   [
+    "Especie",
+    "Artemia salina"
+   ],
+   [
+    "Densidad",
+    "100 nauplios/mL"
+   ],
+   [
+    "Ciclo",
+    "48 h"
+   ]
+  ]
+ },
+ {
+  "id": "qclab",
+  "code": "QCL-25",
+  "name": "Control de Calidad Larval",
+  "type": "control",
+  "w": 14,
+  "d": 8,
+  "h": 4.2,
+  "cap": "lab microbiológico",
+  "desc": "QC con microscopía, conteo y microbiología.",
+  "parts": [
+   "Microscopio invertido",
+   "Cámara de Neubauer",
+   "Autoclave",
+   "Incubadora",
+   "Freezer -20 °C"
+  ],
+  "measures": [
+   [
+    "Análisis",
+    "Conteo + sanidad"
+   ],
+   [
+    "Frecuencia",
+    "2×/día"
+   ],
+   [
+    "Trazabilidad",
+    "QR por lote"
+   ]
+  ]
+ },
+ {
+  "id": "colectores_prep",
+  "code": "COL-26",
+  "name": "Preparación de Colectores",
+  "type": "control",
+  "w": 24,
+  "d": 8,
+  "h": 4.2,
+  "cap": "autoclave + tanque",
+  "desc": "Esterilización y acondicionamiento de colectores.",
+  "parts": [
+   "Autoclave 200 L",
+   "Tanque acondicionamiento 5.000 L",
+   "Racks de secado",
+   "Cortadora",
+   "Balanza industrial"
+  ],
+  "measures": [
+   [
+    "Capacidad",
+    "100 colectores/ciclo"
+   ],
+   [
+    "Esterilización",
+    "121 °C · 20 min"
+   ],
+   [
+    "Acondicionamiento",
+    "5-7 días"
+   ]
+  ]
+ },
+ {
+  "id": "criopreservacion",
+  "code": "CRI-27",
+  "name": "Criopreservación de Gametos",
+  "type": "bio",
+  "w": 24,
+  "d": 8,
+  "h": 4.2,
+  "cap": "4 termos LN₂ 200 L",
+  "desc": "Banco de gametos a −196 °C.",
+  "parts": [
+   "4 termos LN₂",
+   "Programa congelación",
+   "Criotubos 2 mL",
+   "DMSO + trehalosa",
+   "QR por vial"
+  ],
+  "measures": [
+   [
+    "Temperatura",
+    "−196 °C"
+   ],
+   [
+    "Vida útil",
+    "10+ años"
+   ],
+   [
+    "Capacidad",
+    "4.000 viales"
+   ],
+   [
+    "Crioprotector",
+    "DMSO 10%"
+   ]
+  ]
+ }
+]

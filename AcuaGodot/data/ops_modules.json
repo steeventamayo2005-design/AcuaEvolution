@@ -1,0 +1,466 @@
+{
+ "_nota": "VALORES DE PRUEBA. qty = por día a rendimiento x1. Rarezas inspiradas en el sistema de rareza y hop-ups de los juegos de disparos con loot.",
+ "cfg": {
+  "sell_base": 0.85,
+  "wear_per_hour": 0.3,
+  "maint_base": 10,
+  "maint_per_level": 4,
+  "warn": 70,
+  "auto_at": 70,
+  "ult_charge_per_kg": 0.8,
+  "ult_thru": 2.0,
+  "ult_wear": 2.0,
+  "ult_hours": 24
+ },
+ "tiers": [
+  {
+   "n": "—",
+   "c": "#777777",
+   "thru": 0.0,
+   "slots": 0,
+   "collect": 0.0
+  },
+  {
+   "n": "Común",
+   "c": "#d9d9d9",
+   "thru": 1.0,
+   "slots": 1,
+   "collect": 0.3
+  },
+  {
+   "n": "Raro",
+   "c": "#4aa3ff",
+   "thru": 1.25,
+   "slots": 1,
+   "collect": 0.4
+  },
+  {
+   "n": "Épico",
+   "c": "#b26bff",
+   "thru": 1.55,
+   "slots": 2,
+   "collect": 0.55
+  },
+  {
+   "n": "Legendario",
+   "c": "#ffc933",
+   "thru": 1.9,
+   "slots": 2,
+   "collect": 0.7
+  },
+  {
+   "n": "Mítico",
+   "c": "#ff4d4d",
+   "thru": 2.4,
+   "slots": 3,
+   "collect": 0.85
+  }
+ ],
+ "recipes": {
+  "colector_lodo": {
+   "name": "Colector de lodo",
+   "collector": true
+  },
+  "compostera": {
+   "name": "Compostera",
+   "cn_target": 28,
+   "carbon": "carbono_seco",
+   "in": [
+    {
+     "any": [
+      "lodo_ras",
+      "mortalidad",
+      "cabezas_espinas",
+      "visceras",
+      "piel_escamas",
+      "digestato_sol",
+      "sustrato_gastado",
+      "restos_vegetales"
+     ],
+     "qty": 60
+    }
+   ],
+   "out": [
+    {
+     "item": "compost",
+     "qty": 28
+    }
+   ]
+  },
+  "lom": {
+   "name": "Lombricultura",
+   "in": [
+    {
+     "any": [
+      "lodo_ras",
+      "compost",
+      "restos_vegetales"
+     ],
+     "qty": 30
+    }
+   ],
+   "out": [
+    {
+     "item": "humus",
+     "qty": 14
+    },
+    {
+     "item": "lixiviado",
+     "qty": 8
+    },
+    {
+     "item": "lombriz",
+     "qty": 1.2
+    }
+   ],
+   "modes": [
+    {
+     "n": "Humus",
+     "mult": {
+      "humus": 1.2,
+      "lombriz": 0.5
+     }
+    },
+    {
+     "n": "Cría",
+     "mult": {
+      "humus": 0.8,
+      "lombriz": 2.0
+     }
+    }
+   ]
+  },
+  "bsf": {
+   "name": "Mosca soldado negra",
+   "in": [
+    {
+     "any": [
+      "visceras",
+      "cabezas_espinas",
+      "piel_escamas",
+      "mortalidad"
+     ],
+     "qty": 25
+    }
+   ],
+   "out": [
+    {
+     "item": "larvas_bsf",
+     "qty": 5
+    },
+    {
+     "item": "frass",
+     "qty": 6
+    }
+   ],
+   "modes": [
+    {
+     "n": "Pienso",
+     "mult": {
+      "larvas_bsf": 1.2,
+      "frass": 0.7
+     }
+    },
+    {
+     "n": "Frass",
+     "mult": {
+      "larvas_bsf": 0.6,
+      "frass": 1.5
+     }
+    }
+   ]
+  },
+  "biogas": {
+   "name": "Biodigestor",
+   "in": [
+    {
+     "any": [
+      "lodo_ras",
+      "mortalidad",
+      "visceras",
+      "cabezas_espinas",
+      "piel_escamas",
+      "restos_vegetales"
+     ],
+     "qty": 60
+    }
+   ],
+   "out": [
+    {
+     "item": "biogas_m3",
+     "qty": 15
+    },
+    {
+     "item": "digestato_liq",
+     "qty": 35
+    },
+    {
+     "item": "digestato_sol",
+     "qty": 8
+    }
+   ]
+  },
+  "aco": {
+   "name": "Acuaponía",
+   "scrub": 0.015,
+   "in": [
+    {
+     "any": [
+      "efluente"
+     ],
+     "qty": 4
+    }
+   ],
+   "out": [
+    {
+     "item": "hortalizas",
+     "qty": 6
+    },
+    {
+     "item": "restos_vegetales",
+     "qty": 1.5
+    }
+   ]
+  },
+  "hid": {
+   "name": "Hidroponía",
+   "in": [
+    {
+     "any": [
+      "lixiviado",
+      "digestato_liq"
+     ],
+     "qty": 10,
+     "buy": {
+      "item": "nutriente_comercial",
+      "price": 0.15,
+      "eff": 0.85
+     }
+    }
+   ],
+   "out": [
+    {
+     "item": "hortalizas",
+     "qty": 9
+    },
+    {
+     "item": "restos_vegetales",
+     "qty": 2
+    }
+   ]
+  },
+  "aer": {
+   "name": "Aeroponía",
+   "in": [
+    {
+     "any": [
+      "lixiviado",
+      "digestato_liq"
+     ],
+     "qty": 6,
+     "buy": {
+      "item": "nutriente_comercial",
+      "price": 0.15,
+      "eff": 0.85
+     }
+    }
+   ],
+   "out": [
+    {
+     "item": "hortalizas",
+     "qty": 11
+    },
+    {
+     "item": "restos_vegetales",
+     "qty": 1.0
+    }
+   ]
+  },
+  "hor": {
+   "name": "Hongo ostra roja",
+   "in": [
+    {
+     "any": [
+      "carbono_seco"
+     ],
+     "qty": 12,
+     "buy": {
+      "item": "carbono_seco",
+      "price": 0.04,
+      "eff": 1.0
+     }
+    }
+   ],
+   "out": [
+    {
+     "item": "hongos",
+     "qty": 3.5
+    },
+    {
+     "item": "sustrato_gastado",
+     "qty": 8
+    }
+   ]
+  },
+  "hob": {
+   "name": "Hongo ostra blanco",
+   "in": [
+    {
+     "any": [
+      "carbono_seco"
+     ],
+     "qty": 12,
+     "buy": {
+      "item": "carbono_seco",
+      "price": 0.04,
+      "eff": 1.0
+     }
+    }
+   ],
+   "out": [
+    {
+     "item": "hongos",
+     "qty": 4.0
+    },
+    {
+     "item": "sustrato_gastado",
+     "qty": 8
+    }
+   ]
+  },
+  "alg": {
+   "name": "Microalgas",
+   "scrub": 0.005,
+   "in": [
+    {
+     "any": [
+      "efluente"
+     ],
+     "qty": 2
+    }
+   ],
+   "out": [
+    {
+     "item": "microalgas",
+     "qty": 3
+    }
+   ]
+  },
+  "dap": {
+   "name": "Daphnia",
+   "in": [
+    {
+     "any": [
+      "microalgas",
+      "lixiviado"
+     ],
+     "qty": 4
+    }
+   ],
+   "out": [
+    {
+     "item": "daphnia",
+     "qty": 1.5
+    }
+   ]
+  },
+  "zoo": {
+   "name": "Zooplancton",
+   "in": [
+    {
+     "any": [
+      "microalgas"
+     ],
+     "qty": 3
+    }
+   ],
+   "out": [
+    {
+     "item": "zooplancton",
+     "qty": 1.0
+    }
+   ]
+  }
+ },
+ "hopups": {
+  "sensores": {
+   "name": "Sensores IoT",
+   "desc": "Desgaste -30 % y +5 % rendimiento. Publica tags al SCADA.",
+   "cost": 400,
+   "scope": [
+    "*"
+   ],
+   "wear": 0.7,
+   "thru": 0.05
+  },
+  "bomba_pro": {
+   "name": "Bombas de alto caudal",
+   "desc": "+20 % rendimiento, +25 % consumo eléctrico.",
+   "cost": 600,
+   "scope": [
+    "*"
+   ],
+   "thru": 0.2,
+   "kw": 1.25
+  },
+  "recup_calor": {
+   "name": "Recuperador de calor",
+   "desc": "-30 % de consumo eléctrico.",
+   "cost": 1500,
+   "scope": [
+    "*"
+   ],
+   "kw": 0.7
+  },
+  "contrato_directo": {
+   "name": "Contrato directo",
+   "desc": "+15 % de precio en lo que produce este módulo.",
+   "cost": 900,
+   "scope": [
+    "*"
+   ],
+   "sell": 0.15
+  },
+  "mant_predictivo": {
+   "name": "Mantenimiento predictivo",
+   "desc": "Se mantiene solo (requiere SCADA en línea).",
+   "cost": 1200,
+   "scope": [
+    "*"
+   ],
+   "auto_maint": true
+  },
+  "bio_enzimas": {
+   "name": "Bio-enzimas",
+   "desc": "+15 % de producción.",
+   "cost": 800,
+   "scope": [
+    "compostera",
+    "lom",
+    "bsf",
+    "biogas",
+    "hor",
+    "hob"
+   ],
+   "out": 0.15
+  },
+  "retiro_muertos": {
+   "name": "Red de retiro de mortalidad",
+   "desc": "También retira los peces muertos de los tanques.",
+   "cost": 700,
+   "scope": [
+    "colector_lodo"
+   ],
+   "dead": true
+  },
+  "doble_filtro": {
+   "name": "Doble filtro",
+   "desc": "+15 % de lodo retirado por hora.",
+   "cost": 900,
+   "scope": [
+    "colector_lodo"
+   ],
+   "collect": 0.15
+  }
+ }
+}
