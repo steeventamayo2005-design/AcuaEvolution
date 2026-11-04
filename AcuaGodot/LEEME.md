@@ -1,8 +1,12 @@
-# AcuaEvolution · Godot · v0.5.3 (candidata a beta; pendiente de validar en Godot)
+# AcuaEvolution · Godot · v0.5.4 (beta visual; pendiente de validar en Godot)
 
 Extrae TODO el zip en una carpeta nueva e importa project.godot. No copies archivos sueltos sobre otra versión.
 
-Para probar esta copia, importa `AcuaGodot/project.godot` en Godot 4.3 y ejecuta el proyecto con F5.
+Para probar esta copia, importa `project.godot` desde la raíz de la carpeta extraída en Godot 4.3 y ejecuta el proyecto con F5.
+
+## Modo de observación isométrica
+
+La operación sigue siendo en primera persona. Pulsa **F3** para cambiar temporalmente a una cámara ortográfica inclinada que permite leer la distribución de la colonia completa; vuelve a pulsar **F3** (o **Esc**) para regresar a la persona y continuar las tareas. En esa vista, **WASD/flechas** desplazan el encuadre, la **rueda** acerca/aleja y **arrastrar con el botón izquierdo** orbita. La cúpula se oculta solo mientras observas desde arriba y vuelve al regresar a primera persona. Esta cámara sirve para observar, no para interactuar ni reemplazar la tableta de construcción **Tab/M**.
 
 ## Recorrido corto para probar la beta
 
@@ -17,6 +21,7 @@ La conversión de coproductos a balanceado es una abstracción de jugabilidad ba
 ## Cómo se juega ahora
 Un solo mundo continuo en primera persona: sales frente a la nave de tilapia, bajo un domo de cristal. Caminas a cualquier edificio sin pantallas de carga.
 - Tab o M: tableta de planificación (el plano 2D como holograma). También con E en la mesa de la plaza central. Construye, demuele, automatiza y viaja ("Ir allí") sin salir del juego. Al cerrarla, los edificios nuevos aparecen en 3D.
+- F3: vista isométrica de observación; no cambia el modo de interacción en primera persona.
 - WASD mover · Shift correr · E interactuar · Esc soltar el ratón.
 - Ciclo de día y noche con el reloj del juego.
 
@@ -67,3 +72,13 @@ Los módulos auxiliares dejan de ser escenarios vacíos: trabajan solos cada hor
 
 ## Pendiente
 Herramientas en mano (oxímetro, red), enciclopedia, sonido, personalización, mejores texturas y datos reales del Paquete 1. Los valores económicos siguen siendo de prueba.
+
+## Bibliotecas de modelos para una siguiente pasada visual
+
+No se descargaron ni incorporaron modelos externos en esta versión; los edificios actuales siguen usando geometría procedural y las texturas que ya trae el proyecto. Para futuros props modulares (bombas, tuberías, herramientas, vegetación o equipamiento de granja), estas bibliotecas indican licencias permisivas en sus páginas oficiales:
+
+- [Poly Haven Models](https://polyhaven.com/models) publica sus modelos bajo [CC0](https://polyhaven.com/license). La atribución no es obligatoria, pero es recomendable registrar autor y enlace del modelo concreto al incorporarlo.
+- [Kenney Assets](https://kenney.nl/assets) declara que sus paquetes de assets de juego son de dominio público [CC0](https://kenney.nl/support). No se debe usar el logotipo de Kenney como si fuera parte de un proyecto oficial.
+- El [resumen de Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) explica el uso y redistribución, incluso comercial. Aun con CC0, hay que comprobar por separado marcas, logos y derechos de imagen/modelo de terceros para cada asset específico.
+
+La guía de licencias es una referencia para selección futura, no un registro de assets ya incluidos. El estilo visual de esta pasada se guía por la organización modular de hatchery/tanques de las referencias del usuario y no reutiliza arte de otros juegos.

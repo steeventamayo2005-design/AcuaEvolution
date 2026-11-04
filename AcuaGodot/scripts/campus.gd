@@ -8,6 +8,7 @@ var sun: DirectionalLight3D
 var sky_mat: ProceduralSkyMaterial
 var env: Environment
 var lamps: Array = []
+var dome_shell: Node3D
 
 func _ready() -> void:
     _environment()
@@ -108,6 +109,9 @@ func _sector(a0: float, a1: float, col: Color) -> void:
 
 func _dome() -> void:
     var R := Game.DOME_R
+    dome_shell = Node3D.new()
+    dome_shell.name = "DomeShell"
+    add_child(dome_shell)
     var mi := MeshInstance3D.new()
     var sm := SphereMesh.new()
     sm.radius = R
@@ -123,7 +127,7 @@ func _dome() -> void:
     gm.roughness = 0.05
     mi.material_override = gm
     mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-    add_child(mi)
+    dome_shell.add_child(mi)
     # nervaduras: meridianos y paralelos
     var verts := PackedVector3Array()
     for i in 24:
@@ -153,7 +157,11 @@ func _dome() -> void:
     ribs.mesh = am
     ribs.material_override = lm
     ribs.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-    add_child(ribs)
+    dome_shell.add_child(ribs)
+
+func set_observation_mode(active: bool) -> void:
+    if is_instance_valid(dome_shell):
+        dome_shell.visible = not active
 
 func _plaza() -> void:
     var pr := Game.PLAZA_R

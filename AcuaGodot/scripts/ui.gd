@@ -54,6 +54,8 @@ var _tut_on := true
 var _adv: Label
 var _radio_box: PanelContainer
 var _radio_lbl: Label
+var _crosshair: ColorRect
+var observation_mode := false
 
 func tutorial_off() -> void:
     _tut_on = false
@@ -65,6 +67,13 @@ func close_panel() -> void:
     panel = 0
     _tank_root.visible = false
     _shop_root.visible = false
+
+func set_observation_mode(active: bool) -> void:
+    observation_mode = active
+    _crosshair.visible = not active
+    _tut.visible = not active and _tut_on
+    if active:
+        _prompt_cc.visible = false
 
 func _dark(radius: int = 8, alpha: float = 0.92) -> StyleBoxFlat:
     var sb := StyleBoxFlat.new()
@@ -152,12 +161,12 @@ func _ready() -> void:
     _rep = _lbl("")
     rp.add_child(_rep)
     # Texto de ayuda y versión
-    var hint := _lbl("Tab / M = tableta · 1–5 = velocidad (hasta ×100) · 0 = pausa · Esc = ratón libre", 12)
+    var hint := _lbl("F3 = vista isométrica de observación · Tab / M = tableta · 1–5 = velocidad · 0 = pausa", 12)
     hint.modulate = Color(1, 1, 1, 0.45)
     add_child(hint)
     hint.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT, Control.PRESET_MODE_MINSIZE, 14)
     hint.grow_horizontal = Control.GROW_DIRECTION_BEGIN
-    var ver := _lbl("Beta de prueba · v0.5.3", 12)
+    var ver := _lbl("Beta de prueba · v0.5.4", 12)
     ver.modulate = Color(1, 1, 1, 0.45)
     add_child(ver)
     ver.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT, Control.PRESET_MODE_MINSIZE, 12)
@@ -240,15 +249,15 @@ func _ready() -> void:
     rm.add_child(_radio_lbl)
     _radio_box.visible = false
     # Mira
-    var cross := ColorRect.new()
-    cross.color = Color(1, 1, 1, 0.6)
-    cross.set_anchors_preset(Control.PRESET_CENTER)
-    cross.offset_left = -2
-    cross.offset_right = 2
-    cross.offset_top = -2
-    cross.offset_bottom = 2
-    cross.mouse_filter = Control.MOUSE_FILTER_IGNORE
-    add_child(cross)
+    _crosshair = ColorRect.new()
+    _crosshair.color = Color(1, 1, 1, 0.6)
+    _crosshair.set_anchors_preset(Control.PRESET_CENTER)
+    _crosshair.offset_left = -2
+    _crosshair.offset_right = 2
+    _crosshair.offset_top = -2
+    _crosshair.offset_bottom = 2
+    _crosshair.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    add_child(_crosshair)
     # Aviso de interacción (centrado abajo)
     _prompt_cc = CenterContainer.new()
     _prompt_cc.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
@@ -484,7 +493,7 @@ func _process(_dt: float) -> void:
     _money.text = "%.2f $" % Game.money
     _level.text = "Nivel %d · %d/%d XP" % [Game.level, int(Game.xp), 100 * Game.level]
     _rep.text = "Reputación %d %%" % int(Game.reputation)
-    _prompt_cc.visible = prompt != "" and panel == 0
+    _prompt_cc.visible = prompt != "" and panel == 0 and not observation_mode
     _prompt_lbl.text = prompt
     _toast_cc.visible = Game.toast != ""
     _toast_lbl.text = Game.toast
@@ -493,7 +502,7 @@ func _process(_dt: float) -> void:
             _step += 1
         if _step >= STEPS.size():
             _tut_on = false
-    _tut.visible = _tut_on
+    _tut.visible = _tut_on and not observation_mode
     if _tut_on:
         _tut_count.text = "%d/%d   " % [_step + 1, STEPS.size()]
         _tut_title.text = STEPS[_step][0]
@@ -502,7 +511,7 @@ func _process(_dt: float) -> void:
     for r in Game.radio:
         if float(r.age) < 14.0:
             rtxt += "📻 " + str(r.t) + "\n"
-    _radio_box.visible = rtxt != ""
+    _radio_box.visible = rtxt != "" and not observation_mode
     _radio_lbl.text = rtxt.strip_edges()
     if _adv.visible:
         _adv.text = _advice()

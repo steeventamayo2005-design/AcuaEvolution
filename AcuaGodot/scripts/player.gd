@@ -29,6 +29,13 @@ func _ready() -> void:
     Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _unhandled_input(event: InputEvent) -> void:
+    var scene = get_tree().current_scene
+    if scene.observing:
+        if event is InputEventKey and event.pressed and not event.echo and (event.keycode == KEY_F3 or event.keycode == KEY_ESCAPE):
+            scene.toggle_observation()
+        else:
+            scene.handle_observation_input(event)
+        return
     var open: bool = ui.panel_open() or Game.overlay_open
     if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and not open:
         rotate_y(-event.relative.x * SENS)
@@ -37,7 +44,9 @@ func _unhandled_input(event: InputEvent) -> void:
     elif event is InputEventMouseButton and event.pressed and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED and not open:
         Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
     elif event is InputEventKey and event.pressed and not event.echo:
-        if event.keycode == KEY_E:
+        if event.keycode == KEY_F3 and not open:
+            scene.toggle_observation()
+        elif event.keycode == KEY_E:
             if open:
                 ui.close_panel()
                 Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -87,6 +96,8 @@ func _interact() -> void:
                 Game.say("Aireador encendido (60 %)")
 
 func _physics_process(delta: float) -> void:
+    if get_tree().current_scene.observing:
+        return
     var open: bool = ui.panel_open() or Game.overlay_open
     var dir := Vector3.ZERO
     if not open and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
