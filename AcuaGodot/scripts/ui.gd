@@ -56,6 +56,7 @@ var _radio_box: PanelContainer
 var _radio_lbl: Label
 var _crosshair: ColorRect
 var observation_mode := false
+var _speed_buttons: Array[Button] = []
 
 func tutorial_off() -> void:
     _tut_on = false
@@ -77,16 +78,20 @@ func set_observation_mode(active: bool) -> void:
 
 func _dark(radius: int = 8, alpha: float = 0.92) -> StyleBoxFlat:
     var sb := StyleBoxFlat.new()
-    sb.bg_color = Color(0.05, 0.10, 0.15, alpha)
+    sb.bg_color = Color(0.025, 0.085, 0.11, alpha)
     sb.set_corner_radius_all(radius)
-    sb.border_color = Color(0.16, 0.27, 0.35)
+    sb.border_color = Color(0.12, 0.38, 0.42, 0.9)
     sb.set_border_width_all(1)
+    sb.shadow_color = Color(0.0, 0.025, 0.035, 0.42)
+    sb.shadow_size = 5
+    sb.shadow_offset = Vector2(0, 2)
     return sb
 
 func _lbl(t: String, size: int = 14) -> Label:
     var l := Label.new()
     l.text = t
     l.add_theme_font_size_override("font_size", size)
+    l.add_theme_color_override("font_color", Color(0.82, 0.91, 0.9))
     return l
 
 func _btn(parent: Node, t: String, cb: Callable) -> Button:
@@ -98,13 +103,13 @@ func _btn(parent: Node, t: String, cb: Callable) -> Button:
 
 func _pill(parent: Node) -> HBoxContainer:
     var pc := PanelContainer.new()
-    pc.add_theme_stylebox_override("panel", _dark(16))
+    pc.add_theme_stylebox_override("panel", _dark(10, 0.88))
     parent.add_child(pc)
     var mg := MarginContainer.new()
-    mg.add_theme_constant_override("margin_left", 14)
-    mg.add_theme_constant_override("margin_right", 14)
-    mg.add_theme_constant_override("margin_top", 7)
-    mg.add_theme_constant_override("margin_bottom", 7)
+    mg.add_theme_constant_override("margin_left", 10)
+    mg.add_theme_constant_override("margin_right", 10)
+    mg.add_theme_constant_override("margin_top", 5)
+    mg.add_theme_constant_override("margin_bottom", 5)
     pc.add_child(mg)
     var hb := HBoxContainer.new()
     hb.add_theme_constant_override("separation", 10)
@@ -150,6 +155,7 @@ func _ready() -> void:
         b.flat = true
         b.pressed.connect(func(): Game.time_scale = s)
         sp.add_child(b)
+        _speed_buttons.append(b)
     _money = _lbl("")
     _pill(top).add_child(_money)
     _level = _lbl("")
@@ -166,7 +172,7 @@ func _ready() -> void:
     add_child(hint)
     hint.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT, Control.PRESET_MODE_MINSIZE, 14)
     hint.grow_horizontal = Control.GROW_DIRECTION_BEGIN
-    var ver := _lbl("Beta de prueba · v0.5.4", 12)
+    var ver := _lbl("Beta de prueba · v0.5.5", 12)
     ver.modulate = Color(1, 1, 1, 0.45)
     add_child(ver)
     ver.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT, Control.PRESET_MODE_MINSIZE, 12)
@@ -493,6 +499,10 @@ func _process(_dt: float) -> void:
     _money.text = "%.2f $" % Game.money
     _level.text = "Nivel %d · %d/%d XP" % [Game.level, int(Game.xp), 100 * Game.level]
     _rep.text = "Reputación %d %%" % int(Game.reputation)
+    var speed_values := [0, 1, 3, 10, 30, 100]
+    for i in _speed_buttons.size():
+        var active := Game.time_scale == speed_values[i]
+        _speed_buttons[i].modulate = Color(0.35, 0.95, 0.82) if active else Color(0.72, 0.83, 0.84, 0.72)
     _prompt_cc.visible = prompt != "" and panel == 0 and not observation_mode
     _prompt_lbl.text = prompt
     _toast_cc.visible = Game.toast != ""

@@ -13,6 +13,7 @@ var dome_shell: Node3D
 func _ready() -> void:
     _environment()
     _ground()
+    _infrastructure()
     _dome()
     _plaza()
     sync_buildings()
@@ -107,6 +108,47 @@ func _sector(a0: float, a1: float, col: Color) -> void:
     mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
     add_child(mi)
 
+func _infrastructure() -> void:
+    var paving := Mats.plain(Color(0.10, 0.20, 0.23), 0.76, 0.28)
+    var edge := Mats.lamp(Color(0.12, 0.62, 0.66), 0.35)
+    var guide := Mats.lamp(Color(0.45, 0.91, 0.83), 0.75)
+    var start := Game.PLAZA_R + 1.5
+    var finish := Game.DOME_R - 8.0
+    var length := finish - start
+    var middle := (start + finish) * 0.5
+
+    for i in 8:
+        var angle := i * TAU / 8.0
+        var direction := Vector3(cos(angle), 0.0, sin(angle))
+        var center := direction * middle
+        var yaw := PI / 2.0 - angle
+        var path_width := 3.2 if i % 2 == 0 else 2.0
+        var path := Nave.box(self, Vector3(center.x, 0.045, center.z), Vector3(path_width, 0.07, length), paving, false)
+        path.rotation.y = yaw
+        for side in [-1.0, 1.0]:
+            var edge_offset := direction.rotated(Vector3.UP, PI / 2.0) * side * (path_width * 0.5 - 0.08)
+            var stripe := Nave.box(self, Vector3(center.x + edge_offset.x, 0.09, center.z + edge_offset.z), Vector3(0.055, 0.018, length - 0.4), edge, false)
+            stripe.rotation.y = yaw
+
+    for radius in [31.0, 66.0, 101.0]:
+        var ring := MeshInstance3D.new()
+        var mesh := TorusMesh.new()
+        mesh.inner_radius = radius - 0.12
+        mesh.outer_radius = radius + 0.12
+        mesh.rings = 128
+        mesh.ring_segments = 6
+        ring.mesh = mesh
+        ring.material_override = edge
+        ring.position.y = 0.085
+        ring.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+        add_child(ring)
+
+    for i in 8:
+        var angle := i * TAU / 8.0
+        var p := Vector3(cos(angle) * 88.0, 0.0, sin(angle) * 88.0)
+        Nave.cyl(self, p + Vector3(0.0, 0.42, 0.0), 0.16, 0.84, paving)
+        Nave.cyl(self, p + Vector3(0.0, 0.87, 0.0), 0.22, 0.08, guide)
+
 func _dome() -> void:
     var R := Game.DOME_R
     dome_shell = Node3D.new()
@@ -158,6 +200,28 @@ func _dome() -> void:
     ribs.material_override = lm
     ribs.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
     dome_shell.add_child(ribs)
+    var foundation := MeshInstance3D.new()
+    var base_ring := TorusMesh.new()
+    base_ring.inner_radius = R - 0.65
+    base_ring.outer_radius = R - 0.2
+    base_ring.rings = 192
+    base_ring.ring_segments = 8
+    foundation.mesh = base_ring
+    foundation.material_override = Mats.plain(Color(0.12, 0.23, 0.26), 0.45, 0.72)
+    foundation.position.y = 0.18
+    foundation.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+    add_child(foundation)
+    var trim := MeshInstance3D.new()
+    var trim_ring := TorusMesh.new()
+    trim_ring.inner_radius = R - 0.18
+    trim_ring.outer_radius = R + 0.08
+    trim_ring.rings = 192
+    trim_ring.ring_segments = 6
+    trim.mesh = trim_ring
+    trim.material_override = Mats.lamp(Color(0.16, 0.62, 0.67), 0.3)
+    trim.position.y = 0.32
+    trim.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+    add_child(trim)
 
 func set_observation_mode(active: bool) -> void:
     if is_instance_valid(dome_shell):

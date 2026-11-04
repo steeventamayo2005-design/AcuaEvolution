@@ -1,4 +1,4 @@
-# AcuaEvolution · Godot · v0.5.4 (beta visual; pendiente de validar en Godot)
+# AcuaEvolution · Godot · v0.5.5 (beta visual; pendiente de validar en Godot)
 
 Extrae TODO el zip en una carpeta nueva e importa project.godot. No copies archivos sueltos sobre otra versión.
 
@@ -7,6 +7,13 @@ Para probar esta copia, importa `project.godot` desde la raíz de la carpeta ext
 ## Modo de observación isométrica
 
 La operación sigue siendo en primera persona. Pulsa **F3** para cambiar temporalmente a una cámara ortográfica inclinada que permite leer la distribución de la colonia completa; vuelve a pulsar **F3** (o **Esc**) para regresar a la persona y continuar las tareas. En esa vista, **WASD/flechas** desplazan el encuadre, la **rueda** acerca/aleja y **arrastrar con el botón izquierdo** orbita. La cúpula se oculta solo mientras observas desde arriba y vuelve al regresar a primera persona. Esta cámara sirve para observar, no para interactuar ni reemplazar la tableta de construcción **Tab/M**.
+
+## Novedades v0.5.5 · lectura visual de la colonia
+
+- Campus procedural con rutas de servicio radiales, anillos de circulación y balizas de orientación alrededor de la plaza central; la infraestructura acompaña la colocación libre de módulos sin imponer una cuadrícula de construcción.
+- Base de la cúpula reforzada con anillos técnicos metálicos y una línea de guía turquesa, manteniendo el domo transparente y el modo de observación existente.
+- HUD con paneles compactos azul petróleo, acentos verde agua y una indicación clara de la velocidad de simulación activa.
+- No se añadieron modelos externos: la mejora usa geometría y materiales del propio proyecto. La cámara isométrica sigue siendo solo de observación; se vuelve a primera persona para operar y construir.
 
 ## Recorrido corto para probar la beta
 

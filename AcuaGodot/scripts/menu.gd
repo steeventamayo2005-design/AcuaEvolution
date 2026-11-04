@@ -75,7 +75,7 @@ func _ready() -> void:
     _msg.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM, Control.PRESET_MODE_MINSIZE, 20)
     _msg.grow_horizontal = Control.GROW_DIRECTION_BOTH
     var ver := Label.new()
-    ver.text = "Beta de prueba · v0.5.4"
+    ver.text = "Beta de prueba · v0.5.5"
     ver.modulate = Color(1, 1, 1, 0.45)
     add_child(ver)
     ver.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT, Control.PRESET_MODE_MINSIZE, 12)
