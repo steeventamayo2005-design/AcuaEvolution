@@ -1,0 +1,165 @@
+[
+ {
+  "id": "polipos",
+  "code": "M-01",
+  "name": "Colonias de pólipos",
+  "type": "bio",
+  "w": 14,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "20 placas de 40 L",
+  "desc": "Pólipos de Aurelia sobre placas.",
+  "parts": [
+   "20 placas",
+   "Luz tenue",
+   "Chiller"
+  ]
+ },
+ {
+  "id": "estrobilacion",
+  "code": "M-02",
+  "name": "Estrobilación (choque frío)",
+  "type": "bio",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "8 tanques de 0,2 m³",
+  "desc": "Inducción por descenso de temperatura.",
+  "parts": [
+   "8 tanques",
+   "Chiller",
+   "Termostato"
+  ]
+ },
+ {
+  "id": "efiras",
+  "code": "M-03",
+  "name": "Cría de éfiras",
+  "type": "bio",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "6 pseudo-Kreisel de 0,3 m³",
+  "desc": "Captura de éfiras.",
+  "parts": [
+   "6 pseudo-Kreisel",
+   "Red de captura"
+  ]
+ },
+ {
+  "id": "kreisel",
+  "code": "M-04",
+  "name": "Kreisel de crecimiento",
+  "type": "ras",
+  "w": 24,
+  "d": 10,
+  "h": 3.8,
+  "col": "W",
+  "cap": "8 Kreisel de 1,5 m³",
+  "desc": "Flujo laminar circular.",
+  "parts": [
+   "8 Kreisel",
+   "Bomba de flujo",
+   "Filtro"
+  ]
+ },
+ {
+  "id": "cosecha",
+  "code": "M-05",
+  "name": "Cosecha y empaque",
+  "type": "water",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "Mesa y cámara",
+  "desc": "Despacho en vivo.",
+  "parts": [
+   "Mesa",
+   "Cámara fría"
+  ]
+ },
+ {
+  "id": "alimento",
+  "code": "M-06",
+  "name": "Alimento vivo (Artemia, rotíferos)",
+  "type": "feed",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "10 conos",
+  "desc": "Alimento de éfiras y juveniles.",
+  "parts": [
+   "10 conos",
+   "Aireación"
+  ]
+ },
+ {
+  "id": "chiller",
+  "code": "M-07",
+  "name": "Enfriamiento",
+  "type": "power",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "2 chillers",
+  "desc": "Control de 4–20 °C.",
+  "parts": [
+   "2 chillers",
+   "Bombas"
+  ]
+ },
+ {
+  "id": "lab",
+  "code": "M-08",
+  "name": "Laboratorio",
+  "type": "control",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Microscopio",
+  "desc": "Conteo y sanidad.",
+  "parts": [
+   "Microscopio",
+   "Refractómetro"
+  ]
+ },
+ {
+  "id": "tratamiento",
+  "code": "M-09",
+  "name": "Tratamiento de agua",
+  "type": "water",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "Filtros y UV",
+  "desc": "Agua marina.",
+  "parts": [
+   "Filtros",
+   "UV"
+  ]
+ },
+ {
+  "id": "electrica",
+  "code": "M-10",
+  "name": "Sala eléctrica",
+  "type": "power",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Tablero y respaldo",
+  "desc": "Alimentación y respaldo.",
+  "parts": [
+   "Tablero",
+   "UPS"
+  ]
+ }
+]

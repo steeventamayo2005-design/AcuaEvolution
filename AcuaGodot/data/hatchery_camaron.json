@@ -1,0 +1,217 @@
+[
+ {
+  "id": "cuarentena",
+  "code": "C-01",
+  "name": "Cuarentena de reproductores",
+  "type": "bio",
+  "w": 10,
+  "d": 9,
+  "h": 3.4,
+  "col": "W",
+  "cap": "6 tanques de 2 m³",
+  "desc": "Control de patógenos (PCR).",
+  "parts": [
+   "6 tanques",
+   "PCR",
+   "Lavapiés"
+  ]
+ },
+ {
+  "id": "maduracion",
+  "code": "C-02",
+  "name": "Maduración",
+  "type": "bio",
+  "w": 16,
+  "d": 10,
+  "h": 3.8,
+  "col": "W",
+  "cap": "8 tanques de 6 m³",
+  "desc": "Reproductores con fotoperiodo y dieta fresca.",
+  "parts": [
+   "8 tanques 6 m³",
+   "Luz",
+   "Calentador"
+  ]
+ },
+ {
+  "id": "desove",
+  "code": "C-03",
+  "name": "Desove",
+  "type": "bio",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "12 tanques de 0,3 m³",
+  "desc": "Hembras ovígeras en tanques individuales.",
+  "parts": [
+   "12 tanques",
+   "Aireación suave"
+  ]
+ },
+ {
+  "id": "eclosion",
+  "code": "C-04",
+  "name": "Eclosión y nauplios",
+  "type": "bio",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "6 tanques cónicos",
+  "desc": "Cosecha de nauplios por fototaxis.",
+  "parts": [
+   "6 tanques cónicos",
+   "Luz de captura"
+  ]
+ },
+ {
+  "id": "larvicultura",
+  "code": "C-05",
+  "name": "Larvicultura (zoea, mysis, PL)",
+  "type": "ras",
+  "w": 24,
+  "d": 10,
+  "h": 3.8,
+  "col": "W",
+  "cap": "10 tanques de 10 m³",
+  "desc": "De nauplio a postlarva 12.",
+  "parts": [
+   "10 tanques 10 m³",
+   "Dosificador",
+   "Termostato"
+  ]
+ },
+ {
+  "id": "empaque",
+  "code": "C-06",
+  "name": "Empaque de postlarvas",
+  "type": "water",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "W",
+  "cap": "Bolsas con oxígeno",
+  "desc": "Conteo y despacho.",
+  "parts": [
+   "Contador",
+   "Bolsas",
+   "Cajas"
+  ]
+ },
+ {
+  "id": "algas",
+  "code": "C-07",
+  "name": "Microalgas (Chaetoceros)",
+  "type": "feed",
+  "w": 14,
+  "d": 9,
+  "h": 3.8,
+  "col": "E",
+  "cap": "Fotobiorreactores",
+  "desc": "Alimento de zoea.",
+  "parts": [
+   "Fotobiorreactores",
+   "Luz",
+   "CO2"
+  ]
+ },
+ {
+  "id": "artemia",
+  "code": "C-08",
+  "name": "Artemia",
+  "type": "feed",
+  "w": 12,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "10 conos de eclosión",
+  "desc": "Nauplios de Artemia.",
+  "parts": [
+   "10 conos",
+   "Aireación"
+  ]
+ },
+ {
+  "id": "lab",
+  "code": "C-09",
+  "name": "Laboratorio PCR",
+  "type": "control",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Termociclador",
+  "desc": "Sanidad y conteo.",
+  "parts": [
+   "Termociclador",
+   "Microscopio"
+  ]
+ },
+ {
+  "id": "tratamiento",
+  "code": "C-10",
+  "name": "Tratamiento de agua",
+  "type": "water",
+  "w": 14,
+  "d": 8,
+  "h": 3.4,
+  "col": "E",
+  "cap": "Filtro 1 µm, UV y ozono",
+  "desc": "Agua marina tratada.",
+  "parts": [
+   "Filtros",
+   "UV",
+   "Ozono",
+   "Skimmer"
+  ]
+ },
+ {
+  "id": "aireacion",
+  "code": "C-11",
+  "name": "Sopladores",
+  "type": "power",
+  "w": 9,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "2 sopladores",
+  "desc": "Aire para todo el edificio.",
+  "parts": [
+   "2 sopladores",
+   "Silenciador"
+  ]
+ },
+ {
+  "id": "electrica",
+  "code": "C-12",
+  "name": "Sala eléctrica",
+  "type": "power",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Tablero y respaldo",
+  "desc": "Alimentación y respaldo.",
+  "parts": [
+   "Tablero",
+   "UPS",
+   "Generador"
+  ]
+ },
+ {
+  "id": "bodega",
+  "code": "C-13",
+  "name": "Bodega",
+  "type": "feed",
+  "w": 10,
+  "d": 8,
+  "h": 3.2,
+  "col": "E",
+  "cap": "Insumos",
+  "desc": "Almacén seco.",
+  "parts": [
+   "Estantes"
+  ]
+ }
+]

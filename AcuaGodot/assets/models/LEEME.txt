@@ -1,0 +1,1 @@
+Coloca aqui modelos .glb o .gltf con estos nombres: barrel, gas_cylinder, pallet. El juego los usa en lugar de las piezas procedurales. Verifica la licencia de cada modelo.

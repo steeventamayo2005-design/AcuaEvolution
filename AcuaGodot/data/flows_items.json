@@ -1,0 +1,252 @@
+{
+ "_nota": "VALORES DE PRUEBA (aproximados, sin verificar con fuente). Reemplazar con datos reales del Paquete 1. ms = fracción de materia seca; n = fracción de nitrógeno sobre materia seca; cn = relación carbono:nitrógeno.",
+ "params": {
+  "sludge_dry_per_feed": 0.27,
+  "feed_dm": 0.92,
+  "uneaten_max": 0.5,
+  "sludge_ms": 0.1,
+  "water_change_frac": 0.3,
+  "fillet_yield": 0.4,
+  "residue_split": {
+   "cabezas_espinas": 0.68,
+   "visceras": 0.2,
+   "piel_escamas": 0.12
+  },
+  "acopio_cap_kg": 400.0,
+  "disposal_cost_per_kg": 0.06
+ },
+ "items": {
+  "lodo_ras": {
+   "name": "Lodo del RAS (espesado)",
+   "unit": "kg",
+   "ms": 0.1,
+   "n": 0.05,
+   "cn": 8,
+   "organic": true,
+   "kind": "waste"
+  },
+  "mortalidad": {
+   "name": "Peces muertos",
+   "unit": "kg",
+   "ms": 0.27,
+   "n": 0.1,
+   "cn": 4,
+   "organic": true,
+   "kind": "waste"
+  },
+  "cabezas_espinas": {
+   "name": "Cabezas, espinazo y recortes",
+   "unit": "kg",
+   "ms": 0.35,
+   "n": 0.07,
+   "cn": 6,
+   "organic": true,
+   "kind": "waste"
+  },
+  "visceras": {
+   "name": "Vísceras",
+   "unit": "kg",
+   "ms": 0.25,
+   "n": 0.09,
+   "cn": 5,
+   "organic": true,
+   "kind": "waste"
+  },
+  "piel_escamas": {
+   "name": "Piel y escamas",
+   "unit": "kg",
+   "ms": 0.35,
+   "n": 0.12,
+   "cn": 4,
+   "organic": true,
+   "kind": "waste"
+  },
+  "efluente": {
+   "name": "Agua residual de recambio",
+   "unit": "m³",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "kind": "waste"
+  },
+  "carbono_seco": {
+   "name": "Carbono seco (aserrín/bagazo)",
+   "unit": "kg",
+   "kind": "input",
+   "ms": 0.9,
+   "n": 0.005,
+   "cn": 100,
+   "organic": false,
+   "buy": 0.04
+  },
+  "nutriente_comercial": {
+   "name": "Nutriente comercial",
+   "unit": "L",
+   "kind": "input",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "buy": 0.15
+  },
+  "compost": {
+   "name": "Compost",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.6,
+   "n": 0.02,
+   "cn": 15,
+   "organic": false,
+   "price": 0.12
+  },
+  "humus": {
+   "name": "Humus de lombriz",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.6,
+   "n": 0.025,
+   "cn": 12,
+   "organic": false,
+   "price": 0.3
+  },
+  "lixiviado": {
+   "name": "Lixiviado de lombriz",
+   "unit": "L",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 0.08
+  },
+  "lombriz": {
+   "name": "Lombriz (proteína viva)",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 2.5
+  },
+  "larvas_bsf": {
+   "name": "Larvas BSF",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "to_feed": 0.45
+  },
+  "frass": {
+   "name": "Frass de BSF",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.8,
+   "n": 0.03,
+   "cn": 12,
+   "organic": false,
+   "price": 0.15
+  },
+  "biogas_m3": {
+   "name": "Biogás",
+   "unit": "m³",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "burn": 2.0
+  },
+  "digestato_liq": {
+   "name": "Digestato líquido (biol)",
+   "unit": "L",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 0.05
+  },
+  "digestato_sol": {
+   "name": "Digestato sólido",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.25,
+   "n": 0.03,
+   "cn": 12,
+   "organic": false,
+   "price": 0.06
+  },
+  "hortalizas": {
+   "name": "Hortalizas",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 1.1
+  },
+  "hongos": {
+   "name": "Hongos ostra",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 3.2
+  },
+  "sustrato_gastado": {
+   "name": "Sustrato gastado",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.35,
+   "n": 0.015,
+   "cn": 35,
+   "organic": false
+  },
+  "restos_vegetales": {
+   "name": "Restos vegetales",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.15,
+   "n": 0.03,
+   "cn": 15,
+   "organic": false
+  },
+  "microalgas": {
+   "name": "Microalgas",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "to_feed": 0.25
+  },
+  "daphnia": {
+   "name": "Daphnia",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 4.0
+  },
+  "zooplancton": {
+   "name": "Zooplancton",
+   "unit": "kg",
+   "kind": "product",
+   "ms": 0.0,
+   "n": 0.0,
+   "cn": 0,
+   "organic": false,
+   "price": 6.0
+  }
+ }
+}

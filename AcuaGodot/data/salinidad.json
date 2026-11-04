@@ -1,0 +1,104 @@
+{
+  "_nota": "VALORES DE PRUEBA. Reemplazar con los datos reales (Paquete 1). psu = g de sal por kg de agua.",
+  "zones": {
+    "dulce": 0.5,
+    "salada": 35.0
+  },
+  "water": {
+    "rho_base": 0.9982,
+    "rho_per_psu": 0.000765
+  },
+  "market": {
+    "base_price": 0.35,
+    "mean_reversion": 0.08,
+    "daily_volatility": 0.04,
+    "shortage_prob_day": 0.02,
+    "shortage_days_min": 5,
+    "shortage_days_max": 12,
+    "shortage_mult_min": 1.6,
+    "shortage_mult_max": 2.5,
+    "quality_start": 0.96,
+    "quality_min": 0.9,
+    "quality_max": 0.99
+  },
+  "desal": {
+    "capacity_m3_day": 300.0,
+    "kwh_per_m3": 3.5,
+    "sale_price_per_m3": 0.5,
+    "opex_day": 20.0
+  },
+  "fresh_water": {
+    "trucked_price_per_m3": 2.5
+  },
+  "silo": {
+    "capacity_kg": 20000.0
+  },
+  "buildings": {
+    "tilapia_nave": {
+      "psu_min": 0.0,
+      "psu_max": 5.0,
+      "volume_m3": 36.0,
+      "exchange_pct_day": 5.0
+    },
+    "estanque_tilapia": {
+      "psu_min": 0.0,
+      "psu_max": 5.0,
+      "volume_m3": 170.0,
+      "exchange_pct_day": 5.0
+    },
+    "raceway_trucha": {
+      "psu_min": 0.0,
+      "psu_max": 1.0,
+      "volume_m3": 180.0,
+      "exchange_pct_day": 200.0
+    },
+    "estanque_camaron": {
+      "psu_min": 15.0,
+      "psu_max": 25.0,
+      "volume_m3": 345.0,
+      "exchange_pct_day": 3.0
+    },
+    "kreisel_medusas": {
+      "psu_min": 28.0,
+      "psu_max": 35.0,
+      "volume_m3": 192.0,
+      "exchange_pct_day": 5.0
+    },
+    "macroalgas_ulva": {
+      "psu_min": 25.0,
+      "psu_max": 35.0,
+      "volume_m3": 240.0,
+      "exchange_pct_day": 8.0
+    },
+    "hatchery_anadara": {
+      "psu_min": 28.0,
+      "psu_max": 34.0,
+      "volume_m3": 600.0,
+      "exchange_pct_day": 5.0
+    },
+    "hatchery_peces": {
+      "psu_min": 0.0,
+      "psu_max": 5.0,
+      "volume_m3": 150.0,
+      "exchange_pct_day": 5.0
+    },
+    "hatchery_camaron": {
+      "psu_min": 15.0,
+      "psu_max": 30.0,
+      "volume_m3": 400.0,
+      "exchange_pct_day": 5.0
+    },
+    "hatchery_medusas": {
+      "psu_min": 28.0,
+      "psu_max": 35.0,
+      "volume_m3": 300.0,
+      "exchange_pct_day": 5.0
+    },
+    "hatchery_macroalgas": {
+      "psu_min": 25.0,
+      "psu_max": 35.0,
+      "volume_m3": 350.0,
+      "exchange_pct_day": 8.0
+    }
+  }
+}
